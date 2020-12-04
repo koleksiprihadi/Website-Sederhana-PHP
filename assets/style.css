@@ -1,0 +1,121 @@
+/* Pengaturan tempat gambar landing page */
+.bg-landing {
+    /* background: url("https://raw.githubusercontent.com/koleksiprihadi/FinalProject2020/master/public/images/landing.jpg") !important; */
+    /* height: 500px; */
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+}
+.jarak {
+    right: 10px !important;
+    left: 10px !important;
+}
+
+.jarak-atas-bawah {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+/* .jumbotron {
+    background-image: url("https://raw.githubusercontent.com/koleksiprihadi/FinalProject2020/master/public/images/jumbotron-home.jpg") !important;
+    height: 500px;
+    color: black;
+    width: 100%;
+} */
+/* pemberian efek blur putih diatas gambar landing page */
+.bg-landing:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgb(255, 255, 255), transparent);
+  }
+/* pengaturan posisi tulisan pada gambar landing page */
+.text-jumbotron {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 18px;
+    
+  }
+
+
+/* .txt-landing {
+    position: relative;
+    top: 30%;
+    left: 10%;
+} */
+/* ukuran gambar pada landing page */
+.img-landing {
+    height: 700px;
+    width: 100%;
+}
+/* rata kanan kiri text */
+.paragraf {
+    text-align: justify;
+}
+/* pemberian warna pada navigasi bar saat scroll */
+nav.color {
+    background-color:rgb(226, 226, 222) !important;
+}
+/* Memberikan warna pada background tentang kami */
+.border-page1 {
+    border: 2px white;
+    background-color: white;
+    padding: 10px;
+    
+}
+/* Memberikan Border Pada Keunggulan */
+.border {
+    border: 10px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* pengaturan border atau warna latar pada kursus popular*/
+.border-page2 {
+    color: black;
+    background-color: rgb(29, 30, 51);
+    padding: 20px;
+    width: 100%;
+}
+/* Memberi warna backgroun merah dan tulisan putih */
+.warna-merah {
+    background-color: red;
+    color: white;
+}
+
+/* Pemberian Warna Border Atas dari kursus popular */
+.pop-1 {
+    border-top: 6px solid red;
+    background-color:white;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Pemberian Warna Border Atas dari kursus popular */
+.pop-2 {
+    border-top: 6px solid orange;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Pemberian Warna Border Atas dari kursus popular */
+.pop-3 {
+    border-top: 6px solid yellow;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+/* Pemberian Warna Border Atas dari kursus popular */
+.pop-4 {
+    border-top: 6px solid green;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Pemberian jarak pada kursus popular */
+.pading-pop {
+    padding: 10px;
+}
