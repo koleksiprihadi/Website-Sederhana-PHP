@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px;
+}
+
+/*Content About */
+.heading {
+  width: 100%;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.heading h2 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Contact Styling */
+.contact {
+  background: #EDEDED;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.heading {
+  color: #111;
+}
+
+.formBx {
+  min-width: 60%;
+}
+
+.formBx form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3 {
+  color: #111;
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.formBx form input, /* Pengisian */
+.formBx form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #bdc3c7;
+  color: #111;
+  resize: none;
+}
+
+.formBx form textarea {
+  min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+  color: #111;
+}
+
+.contactInfo {
+  min-width: 50%;
+}
+
+.contactInfoBx {
+  position: relative;
+}
+
+.contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #111;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.contactInfo .box .text h3 {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
