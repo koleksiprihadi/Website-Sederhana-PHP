@@ -15,7 +15,7 @@
             <div>
                 <center>
                     <h1>Belajar Menjadi Developer Profesional Sekarang</h1>
-                    <a href="#" class="btn btn-danger ">MULAI BELAJAR</a>
+                    <a href="http://localhost/finalproject/kursus.php?id_kursus=https%3A%2F%2Fwww.youtube.com%2Fembed%2FCleFk3BZB3g&id=CSS+Dasar+-+1+–+Pendahuluan" class="btn btn-danger ">MULAI BELAJAR</a>
                 </center>
             </div>    
     </div>
