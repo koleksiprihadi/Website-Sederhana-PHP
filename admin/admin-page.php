@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Dashboard1</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -110,7 +110,7 @@
               <div class="card-body card-outline">
                 <div class="tab-content p-0">
                   <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="lihat" style="position: relative; height: 300px;">
+                  <div class="chart tab-pane active" id="lihat" style="position: relative; height: 300px; overflow:scroll;">
                       <h5>Lihat</h5>
                         <?php
                             $query = mysqli_query($con,"SELECT * FROM pengumuman");
