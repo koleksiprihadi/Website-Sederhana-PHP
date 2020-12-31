@@ -30,8 +30,8 @@
         </div>
       </li>
 </ul>
-    <a href="#" class="btn btn-light">Login</a>
+    <a href="login.php" class="btn btn-light">Login</a>
     
-    <a href="#" class="btn btn-danger">Daftar</a>
+    <a href="daftar.php" class="btn btn-danger">Daftar</a>
   </div>
 </nav>

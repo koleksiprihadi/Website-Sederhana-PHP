@@ -1,4 +1,9 @@
 <?php require_once("koneksi/dbkoneksi.php")?>
+<?php
+session_start();
+if ($_SESSION['login'] == false){
+    header("Location: login.php");
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
