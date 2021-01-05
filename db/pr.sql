@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2020 at 11:34 AM
+-- Generation Time: Jan 05, 2021 at 12:16 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -24,6 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invoice`
+--
+
+CREATE TABLE `invoice` (
+  `id_req` int(11) NOT NULL,
+  `id_peserta` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tanggal` datetime NOT NULL,
+  `lama_langganan` datetime NOT NULL,
+  `batas_pembayaran` date NOT NULL,
+  `upload_pembayaran` varchar(50) NOT NULL,
+  `status` varchar(11) NOT NULL DEFAULT 'Belum Lunas',
+  `harga` int(11) NOT NULL,
+  `tgl_bayar` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `invoice`
+--
+
+INSERT INTO `invoice` (`id_req`, `id_peserta`, `nama`, `tanggal`, `lama_langganan`, `batas_pembayaran`, `upload_pembayaran`, `status`, `harga`, `tgl_bayar`) VALUES
+(1, 1, 'peserta 1', '2021-01-05 14:39:52', '2021-01-05 14:39:52', '2021-01-05', 'linkedin.png', 'Lunas', 0, 'Tuesday, 05-01-2021'),
+(2, 1, 'peserta 1', '2021-01-05 09:27:20', '2021-04-06 09:27:24', '2021-01-08', 'linkedin.png', 'Belum Lunas', 300000, 'Tuesday, 05-01-2021');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `jawaban`
 --
 
@@ -34,15 +61,6 @@ CREATE TABLE `jawaban` (
   `nama` varchar(50) NOT NULL,
   `jawaban` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `jawaban`
---
-
-INSERT INTO `jawaban` (`id_jawaban`, `id_qna`, `tanggal`, `nama`, `jawaban`) VALUES
-(6, 9, '2020-12-31', 'peserta 2', 'test pengajar'),
-(7, 9, '2020-12-31', 'peserta 2', 'pengajar test'),
-(8, 9, '2020-12-31', 'Web Programming Unpas', 'test');
 
 -- --------------------------------------------------------
 
@@ -66,7 +84,8 @@ CREATE TABLE `kursus` (
 INSERT INTO `kursus` (`id_kursus`, `nama`, `detail`, `pengajar`, `status`, `image`) VALUES
 (1, 'CSS DASAR', '', 1, 'Premium', 'css.png'),
 (2, 'HTML DASAR', '', 1, 'Premium', 'html.png'),
-(3, 'PHP UNTUK PEMULA', '', 1, 'Premium', 'php.png');
+(3, 'PHP UNTUK PEMULA', '', 1, 'Premium', 'php.png'),
+(5, 'google', 'test', 1, 'Premium', 'google.png');
 
 -- --------------------------------------------------------
 
@@ -124,6 +143,7 @@ CREATE TABLE `peserta` (
   `nama` varchar(50) NOT NULL,
   `nohp` int(20) NOT NULL,
   `status` varchar(15) NOT NULL DEFAULT 'Belum Langganan',
+  `exp_status` datetime DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -132,9 +152,9 @@ CREATE TABLE `peserta` (
 -- Dumping data for table `peserta`
 --
 
-INSERT INTO `peserta` (`id_peserta`, `nama`, `nohp`, `status`, `email`, `password`) VALUES
-(1, 'peserta 1', 12345678, 'Belum Langganan', 'peserta@gmail.com', 'peserta'),
-(2, 'peserta 2', 12345678, 'Langganan', 'langanan@gmail.com', 'langganan');
+INSERT INTO `peserta` (`id_peserta`, `nama`, `nohp`, `status`, `exp_status`, `email`, `password`) VALUES
+(1, 'peserta 1', 12345678, 'Belum Langganan', NULL, 'peserta@gmail.com', 'peserta'),
+(2, 'peserta 2', 12345678, 'Langganan', NULL, 'langanan@gmail.com', 'langganan');
 
 -- --------------------------------------------------------
 
@@ -158,8 +178,7 @@ CREATE TABLE `qna` (
 --
 
 INSERT INTO `qna` (`id_qna`, `id_kursus`, `id_pengajar`, `id_peserta`, `nama`, `pertanyaan`, `detail`, `Topic`) VALUES
-(9, 1, 1, 2, 'peserta 2', 'percobaan', 'test', 'CSS DASAR'),
-(10, 1, 1, 2, 'peserta 2', 'percobaan', 'test', 'CSS DASAR');
+(12, 1, 1, 2, 'peserta 2', 'aa', 'aa', 'CSS DASAR');
 
 -- --------------------------------------------------------
 
@@ -218,6 +237,13 @@ INSERT INTO `video` (`id_video`, `id_kursus`, `nama`, `link`) VALUES
 --
 
 --
+-- Indexes for table `invoice`
+--
+ALTER TABLE `invoice`
+  ADD PRIMARY KEY (`id_req`),
+  ADD KEY `id_pesertaa` (`id_peserta`);
+
+--
 -- Indexes for table `jawaban`
 --
 ALTER TABLE `jawaban`
@@ -272,16 +298,22 @@ ALTER TABLE `video`
 --
 
 --
+-- AUTO_INCREMENT for table `invoice`
+--
+ALTER TABLE `invoice`
+  MODIFY `id_req` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `jawaban`
 --
 ALTER TABLE `jawaban`
-  MODIFY `id_jawaban` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_jawaban` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `kursus`
 --
 ALTER TABLE `kursus`
-  MODIFY `id_kursus` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kursus` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pengajar`
@@ -305,7 +337,7 @@ ALTER TABLE `peserta`
 -- AUTO_INCREMENT for table `qna`
 --
 ALTER TABLE `qna`
-  MODIFY `id_qna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_qna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `video`
@@ -316,6 +348,12 @@ ALTER TABLE `video`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `invoice`
+--
+ALTER TABLE `invoice`
+  ADD CONSTRAINT `id_pesertaa` FOREIGN KEY (`id_peserta`) REFERENCES `peserta` (`id_peserta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `jawaban`
