@@ -10,8 +10,7 @@ if (isset($_POST['login'])) {
             $_SESSION['nama'] = $login['nama'];
             $_SESSION['id_peserta'] = $login['id_peserta'];
             $_SESSION['status'] = false;
-            echo $_SESSION['id_pengajar'];
-            header("Location: index.php");
+            header("Location: daftar-langganan.php");
         }
         else if($email == $login['email'] and $password == $login['password'] and $login['status'] == 'Langganan'){
             $_SESSION['login'] = true;

@@ -130,3 +130,6 @@ nav.color {
 .kursus {
     background-color: rgb(197, 197, 195);
 }
+.rata-kanan{
+    text-align: right !important;
+}

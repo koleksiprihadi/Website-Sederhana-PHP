@@ -30,8 +30,22 @@
         </div>
       </li>
 </ul>
-    <a href="login.php" class="btn btn-light">Login</a>
+<?php
+$nama_peserta = $_SESSION['nama'];
+if ($_SESSION['login'] == false){?>
+  <a href="login.php" class="btn btn-success">Login</a>
     
-    <a href="daftar.php" class="btn btn-danger">Daftar</a>
+  <a href="daftar.php" class="btn btn-primary">Daftar</a>
+<?php } else{?>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Halo, <?php echo $nama_peserta ?>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="profile.php">Profile</a>
+      <a class="dropdown-item" href="login.php">Logout</a>
+    </div>
+  </div>
+<?php }?>
   </div>
 </nav>

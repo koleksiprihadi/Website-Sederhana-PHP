@@ -50,7 +50,7 @@
                       <h5>Lihat</h5>
                         <?php
                             $id = $_SESSION['id_pengajar'];
-                            $query = mysqli_query($con,"SELECT * FROM pengumuman WHERE id_pengajar='$id'");
+                            $query = mysqli_query($con,"SELECT * FROM pengumuman WHERE id_pengajar='$id' ORDER BY id_pengumuman DESC");
                             while ($list_pengumuman = mysqli_fetch_array($query)) { ?>
                             <div class="card-body">   
                                 <div class="callout callout-info">
@@ -157,7 +157,7 @@
                 </h3>
               </div>
               <div class="card-body" style="position: relative; height: 300px; overflow:scroll;">
-              <?php $qna_query = mysqli_query($con,"SELECT * FROM qna WHERE id_pengajar ='$id' ");
+              <?php $qna_query = mysqli_query($con,"SELECT * FROM qna WHERE id_pengajar ='$id' ORDER BY id_qna DESC");
               while ($list_qna = mysqli_fetch_array($qna_query)) { ?>
               <div class="callout callout-info">
                   <h5><a href="pengajar-jwb-qna.php?id=<?php echo $list_qna['id_qna']; ?>"><?php echo $list_qna['pertanyaan']; ?></a></h5>
@@ -180,14 +180,14 @@
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Tambah Kursus</a>
+                      <a class="nav-link" href="tambah-kursus.php">Tambah Kursus</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class='card-body'>
                 <?php
-                  $kursusku_query = mysqli_query($con,"SELECT * FROM kursus WHERE pengajar ='$id' ");
+                  $kursusku_query = mysqli_query($con,"SELECT * FROM kursus WHERE pengajar ='$id' ORDER BY id_kursus DESC");
                   while ($list_kursus = mysqli_fetch_array($kursusku_query)) { ?>
                   <div class="card-body">   
                                 <div class="callout callout-info">

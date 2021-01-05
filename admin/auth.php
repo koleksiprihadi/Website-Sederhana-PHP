@@ -10,15 +10,14 @@ if (isset($_POST['login'])) {
             $_SESSION['nama_pengajar'] = $login['nama'];
             $_SESSION['id_pengajar'] = $login['id_pengajar'];
             $_SESSION['privilage'] = 'pengajar';
-            echo $_SESSION['id_pengajar'];
             header("Location: index.php");
         }
         elseif($email == $login['email'] and $password == $login['password'] and $login['privilage'] == 'admin'){
-            $_SESSION['session'] = true;
-            $_SESSION['nama_pengajar'] = $login['nama'];
-            $_SESSION['id_pengajar'] = $login['id_pengajar'];
+            $_SESSION['superadmin'] = true;
+            $_SESSION['nama_admin'] = $login['nama'];
+            $_SESSION['id_admin'] = $login['id_pengajar'];
             $_SESSION['privilage'] = 'admin';
-            header("Location: index.php");
+            header("Location: superadmin.php");
         }
     }
 }

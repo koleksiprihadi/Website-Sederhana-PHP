@@ -1,7 +1,6 @@
 <?php
   session_start();
-  $_SESSION['status'] = false;
-  $_SESSION['login'] = false;
+  session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +18,7 @@
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
           <div class="card-body">
-            <h5 class="card-title text-center">Buat Akun</h5>
+            <h5 class="card-title text-center">Log in</h5>
             <form class="form-signin" method="post">
               <div class="form-label-group">
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>

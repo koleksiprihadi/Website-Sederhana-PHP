@@ -1,4 +1,4 @@
-<?php require_once("koneksi/dbkoneksi.php")?>
+<?php session_start(); require_once("koneksi/dbkoneksi.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -4,7 +4,8 @@
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <?php require_once("header.php") ?>
+        
+        <?php session_start(); require_once("header.php"); ?>
     </head>
     <body>
     <div class="container"><?php require_once ("menu.php"); ?></div>
@@ -15,7 +16,7 @@
             <div>
                 <center>
                     <h1>Belajar Menjadi Developer Profesional Sekarang</h1>
-                    <a href="http://localhost/finalproject/kursus.php?id_kursus=https%3A%2F%2Fwww.youtube.com%2Fembed%2FCleFk3BZB3g&id=CSS+Dasar+-+1+–+Pendahuluan" class="btn btn-danger ">MULAI BELAJAR</a>
+                    <a href="#langganan" class="btn btn-danger ">MULAI BELAJAR</a>
                 </center>
             </div>    
     </div>
@@ -98,58 +99,22 @@
         </div>
     </div>
     <div>
-        <div class="border-page2">
-            <center class="jarak-atas-bawah"><h1>Kelas Terpopuler</h1></center>
+        <div class="border-page2" id="langganan">
+            <center class="jarak-atas-bawah"><h1>Langganan</h1></center>
             <div class="container">
-                <div class="row">
-                    <div class="col-sm pop-1">
+            <div class="col-sm pop-1">
                         <div class="container pading-pop">
                             <center>
                                 <img src="assets/img/html.png" height="100px" alt="">
-                                <h4>HTML 5</h4>
+                                <h4>Rp 100.000/bulan</h4>
+                            
+                                <p>
+                                    Dapatkan Semua Kelas Premium
+                                </p>
+                                <a href="ceklogin.php" class="btn btn-danger ">Daftar</a>
                             </center>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis
-                            </p>
                         </div>
                     </div>
-                    <div class="col-sm"></div>
-                    <div class="col-sm pop-2">
-                        <div class="container pading-pop">
-                            <center>
-                                <img src="assets/img/html.png" height="100px" alt="">
-                                <h4>HTML 5</h4>
-                            </center>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis 
-                        </p>
-                        </div>
-                    </div>
-                    <div class="col-sm"></div>
-                    <div class="col-sm pop-3">
-                        <div class="container pading-pop">
-                            <center>
-                                <img src="assets/img/html.png" height="100px" alt="">
-                                <h4>HTML 5</h4>
-                            </center>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm"></div>
-                    <div class="col-sm pop-4">
-                        <div class="container pading-pop">
-                            <center>
-                                <img src="assets/img/html.png" height="100px" alt="">
-                                <h4>HTML 5</h4>
-                            </center>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
